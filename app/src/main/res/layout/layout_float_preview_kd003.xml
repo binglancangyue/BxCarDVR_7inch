@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:id="@+id/fl_float_preview">
+
+    <FrameLayout
+        android:id="@+id/layout_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.bx.carDVR.ui.AutoFitSurfaceView
+            android:id="@+id/back_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.bx.carDVR.ui.AutoFitSurfaceView
+            android:id="@+id/front_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="26dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/recording_disp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginRight="@dimen/recordingTimeMargin"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="6dp"
+                android:src="@mipmap/recording_state_icon" />
+
+            <TextView
+                android:id="@+id/recording_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/color_b9b9b9"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/color_b9b9b9"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="26dp"
+        android:textColor="@color/color_b9b9b9"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_camera_operation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="@dimen/dvrToolBarMarginBottom"
+        android:divider="@drawable/shape_horizontal_divider"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:visibility="visible"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <LinearLayout style="@style/camera_btn_style"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/btn_lock"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/selector_sos" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/btn_upload_video"
+                android:layout_gravity="center"
+                style="@style/cameraBtnStyle"
+                android:src="@drawable/selector_upload_video" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/btn_take_picture"
+                android:layout_gravity="center"
+                style="@style/cameraBtnStyle"
+                android:src="@drawable/selector_photo_kd003" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/btn_record"
+                android:layout_gravity="center"
+                style="@style/cameraBtnStyle"
+                android:src="@drawable/selector_record_kd003" />
+        </FrameLayout>
+
+        <!--        <LinearLayout style="@style/camera_btn_style">-->
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/btn_adas"-->
+        <!--                style="@style/cameraBtnStyle"-->
+        <!--                android:src="@drawable/selector_btn_adas" />-->
+        <!--        </LinearLayout>-->
+
+<!--        <LinearLayout style="@style/camera_btn_style">-->
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/btn_back_preview"
+                android:layout_gravity="center"
+                style="@style/cameraBtnStyle"
+                android:src="@drawable/selector_back_preview" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/btn_finish"
+                android:layout_gravity="center"
+                style="@style/cameraBtnStyle"
+                android:src="@drawable/selector_back_kd003" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/btn_settings"
+                style="@style/cameraBtnStyle"
+                android:src="@drawable/selector_setting" />
+        </FrameLayout>
+    </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/btn_microphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="65dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/icon_no_mic"
+                    android:visibility="gone"/>
+
+</FrameLayout>

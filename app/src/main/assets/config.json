@@ -1,0 +1,54 @@
+{
+  "general": {
+        "viedo_path":"/media/geoff/workspace/data/rearview_data/大货车/14748472342_1_190109171441_190109172008.avi",
+        "intrinsic_path": "cameraIntrinsic.json",
+        "extrinsic_path": "cameraExtrinsic.json"
+    },
+    "camera_intrinsic_info":{
+        "image_height":720,
+        "image_width":1280,
+        "focal_length":6.14,
+        "pixel_length":8.41,
+        "distortion_parameters":6,
+        "optical_center":[
+            640,
+            360
+        ]
+    },
+    "camera_extrinsic_info":{
+        "pitch":-6,
+        "yaw":0.2,
+        "roll":0.3
+    },
+    "vehicle_info":{
+        "camera_height":1200,
+        "wheel_base":2780,
+        "head_width":1800,
+        "camera_to_head":1600,
+        "camera_to_left_wheel":880,
+        "camera_to_left_windshield":500,
+        "camera_to_right_windshield":500
+    },
+    "tac_info":{
+        "tac_height":20,
+        "square_size":3,
+        "saddle_points_size":3,
+        "template_size":3,
+        "roi":[0,0,1280,720]
+    },
+    "three_wires_info":{
+        "base_point":[
+            0,
+            0
+        ],
+        "reference_point":[
+            0,
+            3600
+        ],
+        "center_location":[
+            0,
+            3600
+        ],
+        "vehicle_to_line":5000
+    }
+}

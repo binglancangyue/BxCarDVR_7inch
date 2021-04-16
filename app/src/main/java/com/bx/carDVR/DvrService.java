@@ -521,7 +521,7 @@ public class DvrService extends Service implements CameraServiceCallback, Format
             if (!cameraList.get(0).isCameraOpened() && gpioManager.isAhdPluginIn()) {
                 cameraList.get(0).openCamera();
             } else {
-
+                FloatToast.makeText(R.string.ahd_hint, FloatToast.LENGTH_SHORT).show();
             }
         }
         //end
@@ -1012,7 +1012,8 @@ public class DvrService extends Service implements CameraServiceCallback, Format
                     break;
                 case Configuration.ACTION_SPEECH_TOOL_CMD:
                     String type = intent.getStringExtra("type");
-                    if ("look_front".equals(type)) {
+                    //add by lym  && !Configuration.ONLY_BACK_CAMERA
+                    if ("look_front".equals(type) && !Configuration.ONLY_BACK_CAMERA) {
                         if (mActivityLife != MainActivity.ACTIVITY_STATE_ONRESUME) {
                             startCameraActivity(FloatPreviewWindow.REQUEST_WINDOW_NORMAL,CAMERA_FRONT_ID);
                         } else {

@@ -90,7 +90,7 @@ public class Configuration {
 
     public static final boolean IS_SUPPORT_REBOOT_HINT = true;
 
-    public static final boolean ONLY_BACK_CAMERA = true;
+    public static final boolean ONLY_BACK_CAMERA = false;
 
     /*
     public static final int CAMERA_NUM = 4; //sofar 4 avin camera

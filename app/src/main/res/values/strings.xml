@@ -84,18 +84,18 @@
     <string name="lock">Lock</string>
     <string name="unlock">Unlock</string>
     <string name="loading_data">Loading data…</string>
-    <string name="stop_dialog_title">提示</string>
-    <string name="btn_sure">确定</string>
-    <string name="btn_cannel">取消</string>
-    <string name="stop_recording">查看录像文件将会停止录像，是否前往查看?</string>
-    <string name="dialog_title_stop_recording">是否停止录影</string>
-    <string name="dialog_message_stop_recording">录影期间，一键理赔通知功能暂停</string>
-    <string name="dialog_title_format">格式化SD卡</string>
-    <string name="dialog_message_format_sd_card">确定要格式化SD卡吗？</string>
-    <string name="dialog_title_setting">"進入設定功能 "</string>
-    <string name="dialog_message_setting_stop_recording">"錄影功能將停止，一鍵理賠通知功能暫停 "</string>
-    <string name="please_open_record">一鍵理賠通知功能關閉，請開啟錄影功能</string>
-    <string name="dvr_video_locking">影像鎖檔中，請稍後</string>
+    <string name="stop_dialog_title">Tips</string>
+    <string name="btn_sure">Confirm</string>
+    <string name="btn_cannel">Cancel</string>
+    <string name="stop_recording">Viewing the video file will stop recording. Do you want to view it?</string>
+    <string name="dialog_title_stop_recording">Do you want to stop recording?</string>
+    <string name="dialog_message_stop_recording">During the video recording, the one button claim notification function is suspended</string>
+    <string name="dialog_title_format">Format SD card</string>
+    <string name="dialog_message_format_sd_card">Are you sure you want to format SD card?</string>
+    <string name="dialog_title_setting">"Enter setting function "</string>
+    <string name="dialog_message_setting_stop_recording">"The video recording function will stop and the one button claim notification function will be suspended "</string>
+    <string name="please_open_record">One click claim notification function is off, please turn on the video function</string>
+    <string name="dvr_video_locking">Image lock file, please wait</string>
     <string name="file_saved">file saved!</string>
 
     <string name="default_speed_string">0 km/h</string>
@@ -103,6 +103,6 @@
     <string name="ahd_hint">Please insert the rear camera</string>
     <string name="ahd_reboot">After the camera is detected, the device will restart after 5 seconds</string>
 
-    <string name="adas_not_inited">adas没有初始化成功!</string>
-    <string name="please_activate_online">请联网激活</string>
+    <string name="adas_not_inited">ADAS failed to initialize!</string>
+    <string name="please_activate_online">Please activate online</string>
 </resources>

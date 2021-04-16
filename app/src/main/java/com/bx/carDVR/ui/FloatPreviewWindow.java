@@ -305,9 +305,11 @@ public class FloatPreviewWindow implements CameraInstance.CameraStateChangeListe
         } else {
             tv_location.setText(locationStr);
         }
+        //add by lym start
         if (Configuration.ONLY_BACK_CAMERA) {
             btn_adas.setVisibility(View.GONE);
         }
+        //end
         LocationManagerTool.getInstance().setOnGpsChangeListener(this);
 
 //        if (Configuration.PROJECT_NAME.equals(Configuration.KD003)) {
@@ -335,6 +337,7 @@ public class FloatPreviewWindow implements CameraInstance.CameraStateChangeListe
 //            btn_back = rootView.findViewById(R.id.btn_finish);
 //            btn_back.setOnClickListener(this);
 //        }
+        //add by lym  && !Configuration.ONLY_BACK_CAMERA
         if (!Configuration.PROJECT_NAME.equals(Configuration.KD003) && !Configuration.ONLY_BACK_CAMERA) {
             frontPreview.setOnClickListener(this);
             backPreview.setOnClickListener(this);

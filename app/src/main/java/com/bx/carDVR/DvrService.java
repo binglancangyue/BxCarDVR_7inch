@@ -232,18 +232,20 @@ public class DvrService extends Service implements CameraServiceCallback, Format
 
         recordTimeDuration = SettingsManager.getInstance().getRecordTime()*1000;
         nextRecordTime = SettingsManager.getInstance().getRecordTime()*1000;
-        if (!Configuration.ONLY_BACK_CAMERA) {
+        if (!Configuration.ONLY_BACK_CAMERA) {//add by lym
             cameraList.add(new CameraInstance(this, mCameraManager, CAMERA_FRONT_ID));
         }
         cameraList.add(new CameraInstance(this, mCameraManager, CAMERA_BACK_ID));
 
         floatPreviewWindow = FloatPreviewWindow.getInstance();
         floatPreviewWindow.onCreate();
-        if (Configuration.ONLY_BACK_CAMERA){
+        //add by lym start
+        if (Configuration.ONLY_BACK_CAMERA) {
             requestFloatWindowState(FloatPreviewWindow.REQUEST_WINDOW_FIRST_LAUNCH, CAMERA_BACK_ID);
-        }else{
+        } else {
             requestFloatWindowState(FloatPreviewWindow.REQUEST_WINDOW_FIRST_LAUNCH, CAMERA_FRONT_ID);
         }
+        //end
         openCameraAtFirst();
         mMainHandler.sendEmptyMessage(MSG_FIRST_LAUNCH_PREVIEW);
         locationManagerTool = LocationManagerTool.getInstance();
@@ -302,11 +304,13 @@ public class DvrService extends Service implements CameraServiceCallback, Format
                     sendEmptyMessage(MSG_START_RECORD_TIME);
                     break;
                 case MSG_FIRST_LAUNCH_PREVIEW:
+                    //add by lym start
                     if (Configuration.ONLY_BACK_CAMERA) {
                         requestFloatWindowState(FloatPreviewWindow.REQUEST_WINDOW_NORMAL, CAMERA_BACK_ID);
                     } else {
                         requestFloatWindowState(FloatPreviewWindow.REQUEST_WINDOW_NORMAL, CAMERA_FRONT_ID);
                     }
+                    //end
                     break;
                 case MSG_AUTO_LAUNCH_PREVIEW:
                 case MSG_OPEN_BACK_CAMERA_FROM_SYSTEMUI:
@@ -504,6 +508,8 @@ public class DvrService extends Service implements CameraServiceCallback, Format
 //        for (CameraInstance cameraInstance : cameraList) {
 //            cameraInstance.openCamera();
 //        }
+
+        //add by lym start
         if (!Configuration.ONLY_BACK_CAMERA) {
             cameraList.get(0).openCamera();
             if (cameraList.size() > 1) {
@@ -518,6 +524,7 @@ public class DvrService extends Service implements CameraServiceCallback, Format
 
             }
         }
+        //end
 
 //        mMainHandler.postDelayed(new Runnable() {
 //            @Override

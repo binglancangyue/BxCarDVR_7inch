@@ -47,9 +47,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         requestMode = intent.getIntExtra(KEY_REQUEST_MODE, FloatPreviewWindow.REQUEST_WINDOW_NORMAL);
         mCameraId = intent.getStringExtra(KEY_SHOW_CAMERA_ID);
+        //add by lym start
         if (Configuration.ONLY_BACK_CAMERA) {
             mCameraId = DvrService.CAMERA_BACK_ID;
         }
+        //end
         setContentView(R.layout.activity_main);
         hideNavigationBar();
         Intent startIntent = new Intent(MainActivity.this, DvrService.class);

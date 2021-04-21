@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        release_key {
+            storeFile file('E:\\AndroidStudioWork\\BxCarDVR20210111\\BxCarDVR_7inch\\BxCarDVR\\release.keystore')
+            storePassword '12345678'
+            keyPassword '12345678'
+            keyAlias 'BxCarDVR'
+        }
+    }
     compileSdkVersion 30
     buildToolsVersion '30.0.3'
 
@@ -9,7 +17,7 @@ android {
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
-        versionName '1.0.210416.1'
+        versionName '1.0.210421.1'
         multiDexEnabled = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 

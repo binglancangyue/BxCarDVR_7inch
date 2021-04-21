@@ -65,7 +65,7 @@ public class Configuration {
 
     public static final String ACTION_POWER_CONNECTED = "com.status.power.connected";
     public static final String ACTION_POWER_DISCONNECTED = "com.status.power.disconnected";
-
+    public static final String ACTION_FACTORY_TEST_RELEASE_CAMERA = "com.sprd.validationtools.action.release_camera";
     public static final String ACTION_TXZ_SHOW = "com.txznet.txz.record.show";
     public static final String ACTION_TXZ_DISMISS = "com.txznet.txz.record.dismiss";
     public static final String ACTION_SETTINGS_WINDOW = "com.android.systemui.settings_window_state";
@@ -86,11 +86,11 @@ public class Configuration {
 
     public static final boolean IS_SUPPORT_ADAS = true;
 
-    public static final boolean IS_SUPPORT_SPLIT = false;
+    public static final boolean IS_SUPPORT_SPLIT = true;//是否分屏
 
     public static final boolean IS_SUPPORT_REBOOT_HINT = true;
 
-    public static final boolean ONLY_BACK_CAMERA = false;
+    public static final boolean ONLY_BACK_CAMERA = false;//只打开后摄
 
     /*
     public static final int CAMERA_NUM = 4; //sofar 4 avin camera

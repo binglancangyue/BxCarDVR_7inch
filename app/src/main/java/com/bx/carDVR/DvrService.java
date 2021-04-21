@@ -211,6 +211,7 @@ public class DvrService extends Service implements CameraServiceCallback, Format
         filter.addAction(Configuration.ACTION_SPEECH_TOOL_CMD);
         filter.addAction(Configuration.ACTION_POWER_CONNECTED);
         filter.addAction(Configuration.ACTION_POWER_DISCONNECTED);
+        filter.addAction(Configuration.ACTION_FACTORY_TEST_RELEASE_CAMERA);
         registerReceiver(CameraConnectionReceiver, filter);
         if (mStorageManager != null) {
             mStorageManager.register(this);
@@ -1045,6 +1046,9 @@ public class DvrService extends Service implements CameraServiceCallback, Format
                 case Configuration.ACTION_POWER_DISCONNECTED:
                     isPowerConnected = false;
                     mMainHandler.sendEmptyMessage(MSG_START_RECORD_BY_POWER);
+                    break;
+                case Configuration.ACTION_FACTORY_TEST_RELEASE_CAMERA:
+                    mMainHandler.sendEmptyMessage(MSG_CLOSE_CAMERA);
                     break;
                 default:
                     break;
